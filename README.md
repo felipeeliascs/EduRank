@@ -117,3 +117,7 @@ estão no `.gitignore`.
 Matemática, Língua Portuguesa, Ciências, História, Geografia, Arte, Educação
 Física, Robótica, projetos interdisciplinares, olimpíadas, feiras científicas e
 demais atividades escolares.
+
+## Licença
+
+Este projeto é distribuído sob a licença [MIT](LICENSE).
