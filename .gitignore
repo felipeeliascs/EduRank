@@ -1,0 +1,11 @@
+# Configuração local com o hash da senha (NUNCA publicar)
+/config.php
+
+# Backups e bases locais (podem conter nomes reais de alunos)
+/backup/*.csv
+*.local.csv
+
+# Sistema operacional / editores
+Thumbs.db
+Desktop.ini
+.DS_Store

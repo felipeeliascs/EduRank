@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>EduRank — Ranking Educacional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EduRank — ranking educacional simples, leve e offline.">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="l-wrapper">
+  <header class="c-header">
+    <a class="c-logo-link" href="index.html" aria-label="EduRank">
+      <img class="c-logo" src="logo.png" alt="EduRank" draggable="false"
+           onerror="this.onerror=null;this.style.display='none';document.getElementById('logoFallback').style.display='inline-block';">
+      <span class="c-logo-fallback" id="logoFallback">EDURANK</span>
+    </a>
+    <button type="button" id="openEditButton" class="c-button c-button--dark">Atualizar Ranking</button>
+  </header>
+
+  <div id="passwordDialog" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+    <div class="modal-content">
+      <button type="button" id="closePasswordDialog" class="close" aria-label="Fechar">&times;</button>
+      <h3 id="modalTitulo">Acesso da coordenação</h3>
+      <p id="loginError" class="u-mensagem-erro" style="display:none">Senha incorreta. Tente novamente.</p>
+      <form id="passwordForm" method="post" action="login.php">
+        <label for="passwordInput">Senha</label>
+        <input type="password" id="passwordInput" name="password" placeholder="Senha"
+               class="c-input" required autocomplete="current-password">
+        <button type="submit" class="c-button c-button--primary">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="l-grid">
+    <div class="l-grid__item l-grid__item--sticky">
+      <div class="c-card u-bg--light-gradient u-text--dark">
+        <div class="c-card__body">
+          <div class="u-display--flex u-justify--space-between">
+            <div class="u-text--left">
+              <div class="u-text--small"><strong id="tituloDestaques">DESTAQUES E DESAFIOS</strong></div>
+              <h2 id="mensagemDestaque">Participe das atividades, acumule pontos e acompanhe sua evolução!</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c-card">
+        <div class="c-card__body">
+          <div class="u-text--center" id="winner"></div>
+        </div>
+      </div>
+    </div>
+    <div class="l-grid__item">
+      <div class="c-card">
+        <div class="c-card__header">
+          <h3>Ranking</h3>
+          <div class="u-text--small u-text--medium">Atualizado automaticamente</div>
+        </div>
+        <div class="c-card__body">
+          <ul class="c-list" id="list">
+            <li class="c-list__item">
+              <div class="c-list__grid">
+                <div class="u-text--left u-text--small u-text--medium">Rank</div>
+                <div class="u-text--left u-text--small u-text--medium">Aluno</div>
+                <div class="u-text--right u-text--small u-text--medium" id="rotuloPontos">Pontos</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./config.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
